@@ -120,15 +120,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PARLER_DEFAULT_LANGUAGE_CODE = 'en'
 PARLER_LANGUAGES = {
     None: (
-        {'code': 'en',},
-        {'code': 'uz',},
-        {'code': 'ru',},
+        {'code': 'en', },
+        {'code': 'uz', },
+        {'code': 'ru', },
     ),
     'default': {
-        'fallbacks': ['en'],          # defaults to PARLER_DEFAULT_LANGUAGE_CODE
-        'hide_untranslated': False,   # the default; let .active_translations() return fallbacks too.
+        'fallbacks': ['en'],  # defaults to PARLER_DEFAULT_LANGUAGE_CODE
+        'hide_untranslated': False,  # the default; let .active_translations() return fallbacks too.
     }
 }
 GRAPHENE = {
-    'SCHEMA': 'apps.schema.schema'  # Where your Graphene schema lives
+    'SCHEMA': 'apps.schema.schema',
 }
