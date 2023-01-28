@@ -71,8 +71,14 @@ class CreateProduct(graphene.Mutation):
 
     @staticmethod
     def mutate(root, info, product_data=None):
-        product_instance = Product(**product_data)
-        product_instance.save()
+        product_instance = Product(**product_data).save()
+        # product = Product(
+        #     name=product_data.name,
+        #     description=product_data.description,
+        #     price=product_data.price,
+        #     category_id=product_data.category_id
+        # )
+        # product.save()
         return CreateProduct(product=product_instance)  # noqa
 
 
